@@ -5,12 +5,41 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>scraper-api-shopee</title>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/home.css" />
 	</head>
 	<body>
-		<form>
-			<input type="text" placeholder="URL" />
-			<div id="result"></div>
+		<form action="#">
+			<h1>Playground</h1>
+			<div class="row">
+				<select onchange="onChangeType()" name="cars" id="fancy-select">
+					<option value="01" selected="selected">Get Product Details</option>
+					<option value="02">Get Search Items</option>
+				</select>
+				<label for="fancy-select">Type</label>
+			</div>
+			
+			<div class="row" id="url">
+        <input type="text" name="fancy-text" id="urlInput"/>
+        <label id="label1" for="fancy-text">URL</label>
+    	</div>
+
+			<div class="row" id="keyword">
+        <input type="text" name="fancy-text" id="keywordInput"/>
+        <label id="label1" for="fancy-text">Keyword</label>
+    	</div>
+
+			<div class="row" id="limit">
+        <input type="text" name="fancy-text" id="limitInput"/>
+        <label id="label1" for="fancy-text">Limit</label>
+    	</div>
+			
+			<div class="row">
+				<textarea name="fancy-textarea" id="fancy-textarea"></textarea>
+				<label for="fancy-textarea">Results</label>
+			</div>
+			
 		</form>
+		<button onclick="onSubmit()" type="submit" tabindex="0">Submit</button>
 	</body>
 	<script src="scripts/http.js"></script>
 	<script src="scripts/home.js"></script>
