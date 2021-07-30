@@ -1,9 +1,8 @@
-import app from '@server';
-import logger from '@shared/Logger';
+import app from "@server";
+import logger from "@shared/Logger";
 
-const PORT: number = parseInt(process.env.PORT as string, 10);
-
-if (!process.env.PORT) process.exit(1);
-app.listen(PORT, () => {
-	logger.info('Express server started on port: ' + PORT);
+// Start the server
+const port = Number(process.env.PORT || 3000);
+app.listen(port, () => {
+  logger.info("Express server started on port: " + port);
 });
