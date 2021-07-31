@@ -9,15 +9,6 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
-    "baseUrl": "./", 
-    "paths": {
-      "@server": [
-        "src/Server"
-      ],
-      "@shared/*": [
-        "src/shared/*"
-      ],
-    },
 },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.test.ts"],
