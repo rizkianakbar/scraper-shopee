@@ -6,12 +6,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>scraper-api-shopee</title>
 		<link rel="stylesheet" type="text/css" href="/stylesheets/home.css" />
+		<script type="text/javascript" nonce="rAnd0m" src="scripts/jquery.js"></script>
+
 	</head>
 	<body>
 		<form action="#">
 			<h1>Playground</h1>
 			<div class="row">
-				<select onchange="onChangeType()" name="cars" id="fancy-select">
+				<select name="cars" id="fancy-select">
 					<option value="01" selected="selected">Get Product Details</option>
 					<option value="02">Get Search Items</option>
 				</select>
@@ -39,10 +41,10 @@
 			</div>
 			
 		</form>
-		<div style="text-align: center;">
-			<button onclick="onSubmit()" type="submit" tabindex="0">Submit</button>
+		<div id="button" style="text-align: center;">
+			<button id="onsubmit" type="submit" tabindex="0">Submit</button>
 		</div>
 	</body>
-	<script src="scripts/http.js"></script>
-	<script src="scripts/home.js"></script>
+	<script type="text/javascript" nonce="rAnd0m" src="scripts/http.js"></script>
+	<script type="text/javascript" nonce="rAnd0m" src="scripts/home.js"></script>
 </html>
