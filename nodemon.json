@@ -1,10 +1,11 @@
 {
   "watch": [
-    "src"
+    "src",
+    ".env"
   ],
-  "ext": "ts, html",
+  "ext": "js,ts,json,html",
   "ignore": [
-    "src/public"
+    "src/**/*.spec.ts"
   ],
-  "exec": "./node_modules/.bin/ts-node --files ./src"
+  "exec": "ts-node  --transpile-only ./src/app.ts"
 }
