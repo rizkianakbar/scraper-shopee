@@ -3,9 +3,9 @@ $(document).ready(function () {
         onSubmit();
 
     })
-    $('#fancy-select').change(function () {
-        const select = $('#fancy-select');
-        const value = $('#fancy-select').find(":selected").val()
+    $('#select').change(function () {
+        const select = $('#select');
+        const value = $('#select').find(":selected").val()
         select.blur();
         getTypeForDisplayedForm(value);
     })
@@ -43,22 +43,22 @@ function onSubmit() {
         "limit": $('#limitInput').val(),
     };
 
-    const type = $('#fancy-select').find(":selected").val()
+    const type = $('#select').find(":selected").val()
     if (type == 01) {
-        Http.Post("/api/products", getProductDetails)
+        Http.Post("/api/products/details", getProductDetails)
             .then((response) => response.json())
             .then((response) => {
                 const result = JSON.stringify(response.item, undefined, 2)
-                $("#fancy-textarea").val(result);
+                $("#textarea").val(result);
             }).catch((err) => {
                 console.log(err)
             });
     } else if (type == 02) {
-        Http.Post("/api/products/search-items", getSearchItems)
+        Http.Post("/api/products/search", getSearchItems)
             .then((response) => response.json())
             .then((response) => {
                 const result = JSON.stringify(response.items, undefined, 2)
-                $("#fancy-textarea").val(result);
+                $("#textarea").val(result);
             }).catch((err) => {
                 console.log(err)
             });
