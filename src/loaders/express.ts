@@ -52,10 +52,14 @@ app.get('/', (req: Request, res: Response) => {
  ***********************************************************************************/
 
 // catch 404 and forward to error handler
+
 app.use((req, res, next) => {
-  const err: any = new Error('Not Found');
-  err['status'] = 404;
-  next(err);
+  res.status(404).json({
+    status: 404,
+    message: 'Routes not found',
+    url: req.originalUrl,
+    method: req.method,
+  });
 });
 
 export default app;
